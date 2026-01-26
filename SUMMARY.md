@@ -28,7 +28,7 @@
   * [Server Side Template Injection (SSTI)](web/vulnerabilites/ssti.md)
   * [SQL Injection](web/vulnerabilites/sqli.md)
   * [XML External Entity (XXE)](web/vulnerabilites/xxe.md)
-* [Encoding Techniques](web/encoding.md)
+* [Encodings](web/encoding.md)
 
 ## Post Exloitation
 
