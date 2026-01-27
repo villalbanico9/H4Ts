@@ -18,60 +18,58 @@ layout:
 
 # Encodings
 
-## URL
+### Encode
 
 {% tabs %}
-{% tab title="Encode" %}
+{% tab title="URL" %}
 ```bash
 echo -n "<content>" | jq -sRr @uri
 ```
 {% endtab %}
 
-{% tab title="Decode" %}
-```bash
-echo -n "<content>" | jq -sRr @urid
-```
-{% endtab %}
-{% endtabs %}
-
-## Base64
-
-{% tabs %}
-{% tab title="Encode" %}
+{% tab title="Base64" %}
 ```bash
 echo -n "<content>" | base64 -w 0
 ```
 {% endtab %}
 
-{% tab title="Decode" %}
-```bash
-echo -n "<content>" | base64 -d
-```
-{% endtab %}
-{% endtabs %}
-
-## Hex
-
-{% tabs %}
-{% tab title="Encode" %}
+{% tab title="Hex" %}
 ```bash
 echo -n "<content>" | xxd -p -c 0
 ```
 {% endtab %}
 
-{% tab title="Decode" %}
+{% tab title="Decimal" %}
 ```bash
-echo -n "<content>" | xxd -p -r
+echo -n "<content>" | od -An -tuC | tr -s '\n' ' '
 ```
 {% endtab %}
 {% endtabs %}
 
-## PowerShell
+### Decode
 
 {% tabs %}
+{% tab title="URL" %}
+```bash
+echo -n "<content>" | jq -sRr @urid
+```
+{% endtab %}
+
 {% tab title="Base64" %}
 ```bash
-echo -n "<content>" | 
+echo -n "<content>" | base64 -d
+```
+{% endtab %}
+
+{% tab title="Hex" %}
+```bash
+echo -n "<content>" | xxd -p -r
+```
+{% endtab %}
+
+{% tab title="Decimal" %}
+```bash
+echo -n "<content>" | awk '{ for (i=1;i<=NF;i++) printf "%c", $i }'
 ```
 {% endtab %}
 {% endtabs %}
