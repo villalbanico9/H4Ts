@@ -1,19 +1,18 @@
 ---
-hidden: true
 layout:
   width: wide
   title:
     visible: true
   description:
-    visible: true
+    visible: false
   tableOfContents:
     visible: true
   outline:
     visible: true
   pagination:
-    visible: true
+    visible: false
   metadata:
-    visible: true
+    visible: false
 ---
 
 # Encodings
